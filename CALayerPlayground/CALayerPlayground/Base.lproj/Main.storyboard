@@ -19,10 +19,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5O-ns-p4A">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Bxb-hf-lzE"/>
                                     <constraint firstAttribute="height" constant="300" id="Fto-4o-yGB"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pNM-ii-LKu" appends="YES" id="Xht-X4-0Lk"/>
+                                    <outletCollection property="gestureRecognizers" destination="kjb-GG-c0M" appends="YES" id="Ytm-hj-Dn3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,6 +41,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pNM-ii-LKu">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="BYZ-38-t0r" id="Eh8-kK-54R"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="kjb-GG-c0M">
+                    <connections>
+                        <action selector="pinchGestureRecognized:" destination="BYZ-38-t0r" id="k2e-FR-lt7"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
         </scene>
     </scenes>
